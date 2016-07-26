@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar ionic>
+    <ion-title>
+      Ionic Gallery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="gallery-button" text-center>
+  	<img [src]="imageSrc" />    
+    <ion-icon name="images" on-tap="openGallery()"></ion-icon>
+    <p>Choose a Photo</p>  
+  </div>  
+</ion-content>
