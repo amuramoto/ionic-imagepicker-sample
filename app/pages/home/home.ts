@@ -15,7 +15,7 @@ export class HomePage {
 
   private openGallery (): void {
     let options = {
-      maximumImagesCount: 5,
+      maximumImagesCount: 8,
       width: 500,
       height: 500,
       quality: 75
