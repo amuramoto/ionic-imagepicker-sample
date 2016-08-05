@@ -1,35 +1,30 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import { Camera } from 'ionic-native';
-
+import { ImagePicker } from 'ionic-native';
+import {GalleryPage} from '../gallery/gallery';
+ 
 @Component({
   templateUrl: 'build/pages/home/home.html'
 })
 
 export class HomePage {
 
-	imageSrc: string;
-
-  constructor(private navCtrl: NavController) {
+  constructor(private _navCtrl: NavController) {
 
   }
 
   private openGallery (): void {
-
-    let cameraOptions = {
-    	quality: 100,      
-      targetWidth: 1000,
-      targetHeight: 1000,
-      destinationType: Camera.DestinationType.FILE_URI,
-      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-      encodingType: Camera.EncodingType.JPEG,      
-      correctOrientation: true
+    let options = {
+      maximumImagesCount: 5,
+      width: 500,
+      height: 500,
+      quality: 75
     }
 
-    Camera.getPicture(cameraOptions)
-      .then(file_uri => this.imageSrc = file_uri, 
-				err => console.log(err)
-			);   
+    ImagePicker.getPictures(options).then(
+      file_uris => this._navCtrl.push(GalleryPage, {images: file_uris}),
+      err => console.log('uh oh')
+    );
 	}
 
 }

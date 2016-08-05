@@ -1,1 +1,18 @@
 @import "../pages/home/home";
+
+ion-content {
+	background-color: color($colors, ionic, base);
+	color: color($colors, ionic, contrast);
+}
+
+ion-navbar {
+	border-bottom: color($colors, ionic, contrast) 1px solid;
+
+	ion-title {
+		font-weight: 500;
+
+		.toolbar-title {
+			font-size: 2.1rem;
+		}
+	}
+}
