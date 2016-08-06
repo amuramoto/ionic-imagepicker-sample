@@ -10,4 +10,3 @@ export class HomePage {
   constructor(private _navCtrl: NavController) {}
 
 }
-
