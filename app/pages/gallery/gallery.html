@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar ionic>
     <ion-title text-center>
-      Your Super Gallery
+      Your Super Profile
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,8 +9,30 @@
 
 <ion-content>
 	<ion-grid>
-	  <ion-row *ngFor="let row of grid">
-	    <ion-col width-50 *ngFor="let file_uri of row">
+	  <ion-row>	  	
+	  	<ion-col center>
+		  	<p>Alex Muramoto</p>
+		  	<p>Dev Advocate</p>
+		  	<p>alex.m@ionic.io</p>		  	
+	  	</ion-col>	  	
+	  	<ion-col width-50 offset-10>
+	  		<img src="img/profile.jpg">
+	  	</ion-col>	  	
+	  </ion-row>
+	  <ion-row>
+	  	<ion-col width-90>		  					
+		  	<h4>About Me</h4>
+		  	<p>I enjoy long walks on the beach and taking humiliating pictures of my dog (pictured above)</p>
+		  </ion-col>
+	  </ion-row>
+	  <ion-row class="pictureRow">
+	  	<ion-col offset-67>
+	  		<h4>My Pictures</h4>
+			</ion-col>
+	  </ion-row>
+	  
+	  <ion-row wrap>
+	    <ion-col width-33 *ngFor="let file_uri of images">
 	    <img src="{{file_uri}}" />
 	    </ion-col>
 	  </ion-row>
