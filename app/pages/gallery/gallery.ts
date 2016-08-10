@@ -16,17 +16,18 @@ export class GalleryPage {
 
   ionViewLoaded() {
   	
-  	var rowNum = 0;
+  	let rowNum = 0;
   	
-  	for (var i = 0; i < this.images.length; i+=2) {
-  		this.grid[rowNum] = Array(2);
+  	for (let i = 0; i < this.images.length; i+=2) {
+  		
+      this.grid[rowNum] = Array(2);
+
   		if (this.images[i]) {
   			this.grid[rowNum][0] = this.images[i]
   		}
   		if (this.images[i+1]) {
   			this.grid[rowNum][1] = this.images[i+1]
   		}
-  		
   	
   		rowNum++;
   	}
