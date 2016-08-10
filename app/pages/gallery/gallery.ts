@@ -16,9 +16,9 @@ export class GalleryPage {
 
   ionViewLoaded() {
   	
-  	var rowNum = 0;
+  	let rowNum = 0;
   	
-  	for (var i = 0; i < this.images.length; i+=2) {
+  	for (let i = 0; i < this.images.length; i+=2) {
   		
   		this.grid[rowNum] = Array(2);
   		
