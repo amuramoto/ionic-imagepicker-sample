@@ -9,11 +9,11 @@ import {GalleryPage} from '../gallery/gallery';
 
 export class HomePage {
 
-  constructor(private _navCtrl: NavController) {
+  constructor(public navCtrl: NavController) {
 
   }
 
-  private openGallery (): void {
+  public openGallery (): void {
     let options = {
       maximumImagesCount: 8,
       width: 500,
@@ -22,7 +22,7 @@ export class HomePage {
     }
 
     ImagePicker.getPictures(options).then(
-      file_uris => this._navCtrl.push(GalleryPage, {images: file_uris}),
+      file_uris => this.navCtrl.push(GalleryPage, {images: file_uris}),
       err => console.log('uh oh')
     );
 	}
