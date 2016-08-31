@@ -6,10 +6,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class GalleryPage {
 
-	private images: Array<string>;	
+  images: Array<string>;  
   
-  constructor(private _navCtrl: NavController, private _navParams: NavParams) {
-  	this.images = this._navParams.get('images');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.images = this.navParams.get('images');
   }
 
 }
